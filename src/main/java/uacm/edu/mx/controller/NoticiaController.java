@@ -40,6 +40,7 @@ public class NoticiaController {
 		
 	}
 	
+	
 	@PutMapping(value="/noticia")
 	public Noticia updateNoticia(@RequestBody Noticia noticia) {
 		
