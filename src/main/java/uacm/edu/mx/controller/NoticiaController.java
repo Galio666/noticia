@@ -30,13 +30,15 @@ public class NoticiaController {
 	NoticiaRepository noticiaRepository;
 	
 	
-	@PostMapping(value="/noticia")
+	@PostMapping(value="/noticia/agregar/{nombreNoticia}")
 	public Noticia addNoticia(@RequestBody Noticia noticia)  {
 		log.debug("_______________________________________________________");
 		log.debug("CON----------------------Entrando al metodo addNoticia");
+		
 		Noticia noticiaReturn =noticiaRepository.save(noticia);
 		log.debug(noticiaReturn.toString());
 		return noticiaReturn;
+		
 		
 	}
 	
